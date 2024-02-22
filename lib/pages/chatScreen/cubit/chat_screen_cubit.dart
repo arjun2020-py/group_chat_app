@@ -12,8 +12,8 @@ class ChatScreenCubit extends Cubit<ChatScreenState> {
   CollectionReference collectionReference =
       FirebaseFirestore.instance.collection('chat_collection');
 
-  CollectionReference chatTileCollection =
-      FirebaseFirestore.instance.collection('user_chat_collection');
+  // CollectionReference chatTileCollection =
+  //     FirebaseFirestore.instance.collection('user_chat_collection');
 
   late Stream<QuerySnapshot> _stream;
   String? emailId;

@@ -47,12 +47,14 @@ class LoginCubit extends Cubit<LoginState> {
       setStringSf(email);
       // chatTileClick(email);
       chatAppShowToast(message: 'User is succssfully sigign');
-      Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => ScreenDetailedChat(emailId: email)));
+      Navigator.of(context).push(
+          MaterialPageRoute(builder: (context) => ChatScreen(email: email)));
     } else {
       chatAppShowToast(message: 'some error is occured');
     }
   }
+
+
 
   setStringSf(String email) async {
     SharedPreferences sharedPreferences = await SharedPreferences.getInstance();
@@ -60,6 +62,4 @@ class LoginCubit extends Cubit<LoginState> {
     sharedPreferences.setString('email', email);
     print('set email is ${sharedPreferences.setString('email', email)}');
   }
-
- 
 }

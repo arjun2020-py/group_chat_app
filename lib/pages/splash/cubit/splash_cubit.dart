@@ -49,7 +49,7 @@ class SplashCubit extends Cubit<SplashState> {
           break;
         case AuthStatus.signedIn:
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (context) => ScreenDetailedChat(emailId: email ?? '',)
+            builder: (context) => ChatScreen(email: email ?? '',)
           ));
           break;
 
